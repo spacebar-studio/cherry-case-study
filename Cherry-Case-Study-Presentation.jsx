@@ -702,12 +702,14 @@ function CherryPostcard(){
   const doFlip=()=>{
     if(!flipped){
       setFlipped(true);
-      const cc=[];
-      for(let i=0;i<35;i++){
-        cc.push({id:i,x:Math.random()*100,clr:["#859ADE","#9FB3E8","#7B8FD4","#B8C6F0","#A3B5EA","#C8D4F4","#6B82C9"][Math.floor(Math.random()*7)],sz:Math.random()*6+3,del:Math.random()*1.5,dur:Math.random()*2+2,rot:Math.random()*360,shape:Math.random()>0.5});
-      }
-      setConfetti(cc);
-      setTimeout(()=>setConfetti([]),5000);
+      setTimeout(()=>{
+        const cc=[];
+        for(let i=0;i<35;i++){
+          cc.push({id:i,x:Math.random()*100,clr:["#859ADE","#9FB3E8","#7B8FD4","#B8C6F0","#A3B5EA","#C8D4F4","#6B82C9"][Math.floor(Math.random()*7)],sz:Math.random()*6+3,del:Math.random()*1.5,dur:Math.random()*2+2,rot:Math.random()*360,shape:Math.random()>0.5});
+        }
+        setConfetti(cc);
+        setTimeout(()=>setConfetti([]),5000);
+      },1300);
     } else {
       setFlipped(false);
       setConfetti([]);

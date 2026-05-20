@@ -750,14 +750,24 @@ function CherryPostcard(){
                       <div style={{width:72,height:84,borderRadius:4,background:"linear-gradient(145deg,#859ADE 0%,#6B82C9 40%,#4A62A8 100%)",display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",padding:3,position:"relative",boxShadow:"0 2px 8px rgba(133,154,222,0.35),inset 0 1px 1px rgba(255,255,255,0.2)"}}>
                         <div style={{position:"absolute",inset:3,border:"1.5px solid rgba(255,255,255,0.3)",borderRadius:2}}/>
                         <div style={{position:"absolute",inset:5,border:"0.5px dashed rgba(255,255,255,0.2)",borderRadius:1}}/>
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" style={{marginBottom:3}}>
-                          <path d="M8 22 Q14 18 22 8" stroke="rgba(255,255,255,0.9)" strokeWidth="1.5" strokeLinecap="round" fill="none"/>
-                          <path d="M22 8 L24 7 L23 10 Z" fill="rgba(255,255,255,0.95)"/>
-                          <circle cx="18" cy="13" r="1" fill="rgba(255,255,255,0.7)"/>
-                          <circle cx="14" cy="17" r="0.7" fill="rgba(255,255,255,0.5)"/>
-                          <circle cx="21" cy="10" r="0.6" fill="rgba(255,255,255,0.6)"/>
-                          <path d="M10 20 Q11 19 12 20" stroke="rgba(255,255,255,0.4)" strokeWidth="0.5" strokeLinecap="round" fill="none"/>
-                          <path d="M16 15 Q17 14 18 15.5" stroke="rgba(255,255,255,0.35)" strokeWidth="0.4" strokeLinecap="round" fill="none"/>
+                        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" style={{marginBottom:2}}>
+                          <defs>
+                            <radialGradient id="starGlow" cx="0.5" cy="0.5" r="0.5"><stop offset="0%" stopColor="rgba(255,255,255,0.9)"/><stop offset="100%" stopColor="rgba(255,255,255,0)"/></radialGradient>
+                            <linearGradient id="tailFade" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stopColor="rgba(255,255,255,0.85)"/><stop offset="100%" stopColor="rgba(255,255,255,0)"/></linearGradient>
+                          </defs>
+                          <circle cx="9" cy="8" r="5" fill="url(#starGlow)"/>
+                          <path d="M9 5.5 L9.8 7.5 L12 7.5 L10.3 8.8 L10.9 11 L9 9.5 L7.1 11 L7.7 8.8 L6 7.5 L8.2 7.5 Z" fill="rgba(255,255,255,0.95)"/>
+                          <path d="M11 10 Q16 14 26 27" stroke="url(#tailFade)" strokeWidth="2.2" strokeLinecap="round" fill="none"/>
+                          <path d="M11 10 Q17 13 27 26" stroke="rgba(255,255,255,0.3)" strokeWidth="3.5" strokeLinecap="round" fill="none"/>
+                          <path d="M11 10 Q15 13.5 24 25" stroke="rgba(255,255,255,0.15)" strokeWidth="5" strokeLinecap="round" fill="none"/>
+                          <circle cx="14" cy="13" r="0.8" fill="rgba(255,255,255,0.6)"/>
+                          <circle cx="17" cy="16" r="0.6" fill="rgba(255,255,255,0.45)"/>
+                          <circle cx="20" cy="19" r="0.5" fill="rgba(255,255,255,0.35)"/>
+                          <circle cx="12" cy="11.5" r="0.5" fill="rgba(255,255,255,0.5)"/>
+                          <line x1="9" y1="8" x2="6" y2="5" stroke="rgba(255,255,255,0.4)" strokeWidth="0.5" strokeLinecap="round"/>
+                          <line x1="9" y1="8" x2="13" y2="6" stroke="rgba(255,255,255,0.35)" strokeWidth="0.5" strokeLinecap="round"/>
+                          <line x1="9" y1="8" x2="7" y2="11" stroke="rgba(255,255,255,0.3)" strokeWidth="0.5" strokeLinecap="round"/>
+                          <line x1="9" y1="8" x2="5" y2="8.5" stroke="rgba(255,255,255,0.25)" strokeWidth="0.5" strokeLinecap="round"/>
                         </svg>
                         <div style={{fontSize:7.5,color:"rgba(255,255,255,0.95)",fontWeight:700,fontFamily:FT,letterSpacing:"0.16em",textTransform:"uppercase"}}>Cherry</div>
                       </div>

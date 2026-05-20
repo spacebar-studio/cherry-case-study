@@ -750,7 +750,7 @@ function CherryPostcard(){
                       <div style={{width:72,height:84,borderRadius:4,background:"linear-gradient(145deg,#859ADE 0%,#6B82C9 40%,#4A62A8 100%)",display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",padding:3,position:"relative",boxShadow:"0 2px 8px rgba(133,154,222,0.35),inset 0 1px 1px rgba(255,255,255,0.2)"}}>
                         <div style={{position:"absolute",inset:3,border:"1.5px solid rgba(255,255,255,0.3)",borderRadius:2}}/>
                         <div style={{position:"absolute",inset:5,border:"0.5px dashed rgba(255,255,255,0.2)",borderRadius:1}}/>
-                        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" style={{marginBottom:2}}>
+                        <svg width="44" height="44" viewBox="0 0 34 34" fill="none" style={{marginBottom:0}}>
                           <defs>
                             <radialGradient id="starGlow" cx="0.5" cy="0.5" r="0.5"><stop offset="0%" stopColor="rgba(255,255,255,0.9)"/><stop offset="100%" stopColor="rgba(255,255,255,0)"/></radialGradient>
                             <linearGradient id="tailFade" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stopColor="rgba(255,255,255,0.85)"/><stop offset="100%" stopColor="rgba(255,255,255,0)"/></linearGradient>

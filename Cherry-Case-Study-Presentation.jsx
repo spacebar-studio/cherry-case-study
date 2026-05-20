@@ -620,7 +620,7 @@ ${ELEM_A.map((a,i)=>'@keyframes bse'+i+'{from{'+a+'}to{opacity:1;transform:none;
 @keyframes pcGlow{0%,100%{box-shadow:0 12px 40px rgba(133,154,222,0.12),0 4px 12px rgba(0,0,0,0.04)}50%{box-shadow:0 20px 60px rgba(133,154,222,0.28),0 8px 20px rgba(0,0,0,0.08)}}
 @keyframes pcFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
 @keyframes pcShine{0%{left:-120%}100%{left:120%}}
-@keyframes pcConfetti{0%{transform:translateY(-20px) rotate(0);opacity:0}8%{opacity:1}75%{opacity:0.8}100%{transform:translateY(100vh) rotate(720deg);opacity:0}}
+@keyframes pcConfetti{0%{transform:translateY(-60px) rotate(0);opacity:0}5%{opacity:0.9}70%{opacity:0.7}100%{transform:translateY(100vh) rotate(720deg);opacity:0}}
 @keyframes pcBtnGlow{0%,100%{box-shadow:0 0 6px rgba(133,154,222,0.25),0 0 14px rgba(133,154,222,0.08)}50%{box-shadow:0 0 12px rgba(133,154,222,0.5),0 0 28px rgba(133,154,222,0.18)}}
 ::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:rgba(133,154,222,0.2);border-radius:2px}
 @media(prefers-reduced-motion:reduce){*{animation-duration:0.01ms!important;transition-duration:0.01ms!important}}
@@ -705,7 +705,7 @@ function CherryPostcard(){
       setTimeout(()=>{
         const cc=[];
         for(let i=0;i<35;i++){
-          cc.push({id:i,x:Math.random()*100,clr:["#859ADE","#9FB3E8","#7B8FD4","#B8C6F0","#A3B5EA","#C8D4F4","#6B82C9"][Math.floor(Math.random()*7)],sz:Math.random()*6+3,del:Math.random()*1.5,dur:Math.random()*2+2,rot:Math.random()*360,shape:Math.random()>0.5});
+          cc.push({id:i,x:Math.random()*100,clr:["#859ADE","#9FB3E8","#7B8FD4","#B8C6F0","#A3B5EA","#C8D4F4","#6B82C9"][Math.floor(Math.random()*7)],sz:Math.random()*6+3,del:Math.random()*0.3,dur:Math.random()*2+2,rot:Math.random()*360,shape:Math.random()>0.5});
         }
         setConfetti(cc);
         setTimeout(()=>setConfetti([]),5000);
@@ -717,7 +717,7 @@ function CherryPostcard(){
   };
   return (
     <div style={{display:"flex",flexDirection:"column",alignItems:"center",width:"100%",position:"relative"}}>
-      {confetti.length>0&&<div style={{position:"fixed",inset:0,pointerEvents:"none",zIndex:999}}>{confetti.map(c2=><div key={c2.id} style={{position:"absolute",left:c2.x+"%",top:-20,width:c2.sz,height:c2.sz,background:c2.clr,borderRadius:c2.shape?"50%":"2px",transform:"rotate("+c2.rot+"deg)",animation:"pcConfetti "+c2.dur+"s ease-in "+c2.del+"s forwards"}}/>)}</div>}
+      {confetti.length>0&&<div style={{position:"fixed",inset:0,pointerEvents:"none",zIndex:999}}>{confetti.map(c2=><div key={c2.id} style={{position:"absolute",left:c2.x+"%",top:-60,width:c2.sz,height:c2.sz,background:c2.clr,borderRadius:c2.shape?"50%":"2px",transform:"rotate("+c2.rot+"deg)",opacity:0,animation:"pcConfetti "+c2.dur+"s ease-out "+c2.del+"s forwards"}}/>)}</div>}
       <div style={{width:flipped?680:440,transition:"width .8s cubic-bezier(.4,0,.2,1)"}}>
         <div style={{perspective:1200,width:"100%"}}>
           <div style={{transformStyle:"preserve-3d",animation:flipped?"none":"pcTilt 6s ease-in-out infinite"}}>
